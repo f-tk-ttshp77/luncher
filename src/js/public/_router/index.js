@@ -4,13 +4,13 @@ import VueRouter from 'vue-router';
 import Home from '@Public/Pages/Home';
 import Swipe from '@Public/Pages/Swipe';
 import Bookmarks from '@Public/Pages/Bookmarks';
+import Detail from '@Public/Pages/Detail';
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       name: 'home',
       path: '',
       component: Home,
@@ -24,6 +24,11 @@ export default new VueRouter({
       name: 'bookmarks',
       path: '/bookmarks',
       component: Bookmarks,
+    },
+    {
+      name: 'detail',
+      path: '/:id',
+      component: Detail,
     },
   ],
 });
