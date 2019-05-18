@@ -1,0 +1,67 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:vue/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@Public", "./src/js/public"],
+        ],
+        "extensions": ['.vue', '.js', '.json', '.css']
+      }
+    }
+  },
+  "rules": {
+    "no-new": "off",
+    "no-console": "warn",
+    "no-control-regex": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 90,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreUrls": true
+      }
+    ],
+    "no-irregular-whitespace": [
+      "error",
+      {
+        "skipTemplates": true,
+        "skipStrings": true
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ],
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 3,
+        "multiline": {
+          "max": 1
+        }
+      }
+    ]
+  }
+}
